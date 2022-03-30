@@ -13,7 +13,7 @@
 - [ ] :bug: Corrections des bugs
 - [ ] :trophy: Version finale
 
-*Progression à venir*
+*Progression à venir par la suite*
 
 --- 
 
