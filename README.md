@@ -7,7 +7,7 @@
 - [x] :triangular_ruler: Diagramme cas d'utilisation
 - [x] :triangular_ruler: Diagramme de classes
 - [x] :triangular_ruler: Diagramme de séquence
-- [ ] :closed_book: Mise en place de la couche business
+- [x] :closed_book: Mise en place de la couche business
 - [ ] :blue_book: Mise en place des entités
 - [ ] :green_book: Ajout des méthodes
 - [ ] :bug: Corrections des bugs
