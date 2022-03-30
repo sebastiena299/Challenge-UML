@@ -1,17 +1,34 @@
 # **Banque en ligne**
 
+![Image](bank.png)
+
 ## **Etapes**
 ---
-- [ ] :sparkles: Diagramme cas d'utilisations
-- [ ] :sparkles: Diagramme de classe
-- [ ] :sparkles: Diagramme de séquences
-- [ ] :sparkles: Mise en place de la couche business
-- [ ] :sparkles: Mise en place des entités
-- [ ] :sparkles: Ajout des méthodes
+- [x] :triangular_ruler: Diagramme cas d'utilisation
+- [x] :triangular_ruler: Diagramme de classes
+- [x] :triangular_ruler: Diagramme de séquence
+- [ ] :closed_book: Mise en place de la couche business
+- [ ] :blue_book: Mise en place des entités
+- [ ] :green_book: Ajout des méthodes
+- [ ] :bug: Corrections des bugs
+- [ ] :trophy: Version finale
 
 *Progression à venir*
 
 --- 
+
+## **Captures**
+
+---
+
+**Diagramme de cas d'utilisation** :
+![UML de cas particulier](Diag_Use_Cases.png)
+**Diagramme de classes** :
+![UML de classe](Diag_Class.png)
+**Diagramme de séquence** :
+![UML de sequence](Diag_Sequence.png)
+
+---
 
 ### **Aides**
 
