@@ -3,7 +3,7 @@
 ![Image](bank.png)
 
 ## **Etapes**
----
+
 - [x] :triangular_ruler: Diagramme cas d'utilisation
 - [x] :triangular_ruler: Diagramme de classes
 - [x] :triangular_ruler: Diagramme de séquence
@@ -19,13 +19,11 @@
 
 ## **Captures**
 
----
-
-**Diagramme de cas d'utilisation** :
+### **Diagramme de cas d'utilisation** :
 ![UML de cas particulier](Diag_Use_Cases.png)
-**Diagramme de classes** :
+### **Diagramme de classes** :
 ![UML de classe](Diag_Class.png)
-**Diagramme de séquence** :
+### **Diagramme de séquence** :
 ![UML de sequence](Diag_Sequence.png)
 
 ---
