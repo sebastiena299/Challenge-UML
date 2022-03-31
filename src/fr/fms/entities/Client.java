@@ -6,7 +6,6 @@ import java.util.Locale;
 
 public class Client {
 	
-<<<<<<< HEAD
 	// Variables
 	
 	private int id;
@@ -90,8 +89,5 @@ public class Client {
 	public String toString() {
 		return "" + displayDate() + "";
 	}
-=======
-	
->>>>>>> 6ca864d4717acb184fd7536ce1edbfd9d8aef2fc
 
 }
