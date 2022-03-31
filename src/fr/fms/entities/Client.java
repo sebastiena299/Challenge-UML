@@ -94,7 +94,7 @@ public class Client {
 	public String toString() {
 		return "[ Role : " + getClass().getSimpleName() + " ] [ Nom : " + getLastName() + " ] "
 				+ "[ Prénom : " + getFirstName() + " ] [ N° client : " + getClientNumber() + " ] "
-				+ "[ Adresse : " + getAddress() + " ]";
+				+ "[ Adresse : " + getAddress() + " ] [ " + displayDate() + " ]";
 	}
 
 }

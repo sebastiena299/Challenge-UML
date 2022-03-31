@@ -4,7 +4,7 @@ public interface IJobOperation {
 	
 	public void consultation();
 	public void transfer();
-	public void payment();
+	public void deposit();
 	public void withdrawal();
 	
 }

@@ -14,11 +14,11 @@ public class Operation {
 	
 	//Constructors
 	
-	public Operation(int accountNumber, int clientNumber, Date createdAt, String description) {
+	public Operation(int accountNumber, int clientNumber, String description) {
 		this.accountNumber = accountNumber;
 		this.clientNumber = clientNumber;
-		this.createdAt = createdAt;
 		this.description = description;
+		setCreatedAt(new Date());
 	}
 	
 	//Methods
