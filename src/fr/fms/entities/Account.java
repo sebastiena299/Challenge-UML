@@ -6,14 +6,14 @@ public class Account {
 
 	private int accountNumber;
 	private int clientNumber;
-	private double amount;
+	private double accountBalance;
 	private Date createdAt;
 	
-	public Account (int accountNumber,  int clientNumber, double amount, Date createdAt) {
-		this.accountNumber = accountNumber;
-		this.clientNumber = clientNumber;
-		this.amount = amount;
-		this.createdAt = createdAt;
+	public Account (int accountNumber,  int clientNumber, double accountBalance) {
+		setAccountNumber(accountNumber);
+		setClientNumber(clientNumber);
+		setAccountBalance(accountBalance);
+		setCreatedAt(new Date());
 	}
 
 	public int getAccountNumber() {
@@ -32,12 +32,12 @@ public class Account {
 		this.clientNumber = clientNumber;
 	}
 
-	public double getAmount() {
-		return amount;
+	public double getAccountBalance() {
+		return accountBalance;
 	}
 
-	public void setAmount(double amount) {
-		this.amount = amount;
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
 	}
 
 	public Date getCreatedAt() {

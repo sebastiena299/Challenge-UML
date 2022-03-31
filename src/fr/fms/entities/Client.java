@@ -14,6 +14,7 @@ public class Client {
 	private String firstName;
 	private String address;
 	private Date createdAt;
+	private boolean isAdmin = false;
 	
 	// Constructors
 	
@@ -74,6 +75,10 @@ public class Client {
 
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
+	}
+	
+	public boolean getIsAdmin() {
+		return isAdmin;
 	}
 	
 	// Méthodes

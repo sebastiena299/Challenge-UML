@@ -1,14 +1,11 @@
 package fr.fms.entities;
 
-import java.util.Date;
-
 public class CurrentAccount extends Account {
 
 	private double authorizedOverdraft;
 
-	public CurrentAccount(int accountNumber, int clientNumber, double amount, Date createdAt,
-			double authorizedOverdraft) {
-		super(accountNumber, clientNumber, amount, createdAt);
+	public CurrentAccount(int accountNumber, int clientNumber, double accountBalance, double authorizedOverdraft) {
+		super(accountNumber, clientNumber, accountBalance);
 		this.authorizedOverdraft = authorizedOverdraft;
 
 	}
