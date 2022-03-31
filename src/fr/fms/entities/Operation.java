@@ -1,31 +1,70 @@
 package fr.fms.entities;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 
-import fr.fms.interfaces.IJobOperation;
+public class Operation {
+	
+	//Attributes
+	
+	private int accountNumber;
+	private int clientNumber;
+	private Date createdAt;
+	private String description;
+	
+	//Constructors
+	
+	public Operation(int accountNumber, int clientNumber, Date createdAt, String description) {
+		this.accountNumber = accountNumber;
+		this.clientNumber = clientNumber;
+		this.createdAt = createdAt;
+		this.description = description;
+	}
+	
+	//Methods
 
-public class Operation implements IJobOperation {
-
-	@Override
-	public void consultation() {
-		// TODO Auto-generated method stub
-		
+	public String getDescription() {
+		return description;
 	}
 
-	@Override
-	public void transfer() {
-		// TODO Auto-generated method stub
-		
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	@Override
-	public void payment() {
-		// TODO Auto-generated method stub
-		
+	public Date getCreatedAt() {
+		return createdAt;
 	}
 
-	@Override
-	public void withdrawal() {
-		// TODO Auto-generated method stub
-		
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public int getClientNumber() {
+		return clientNumber;
+	}
+
+	public void setClientNumber(int clientNumber) {
+		this.clientNumber = clientNumber;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	
+	public String displayDate() {
+		DateFormat shortDateFormatEN = DateFormat.getDateTimeInstance(
+			DateFormat.SHORT,
+		    DateFormat.SHORT, new Locale("FR","fr"));
+		return shortDateFormatEN.format(getCreatedAt()).toString();
+	}
+	
+	public String toString() {
+		return " Numéro de compte : " + this.accountNumber + " ; Numéro de client : " + this.clientNumber
+				+ " ; Date : " + this.displayDate() + " ; " + description;
 	}
 
 }
