@@ -18,4 +18,48 @@ public class CurrentAccount extends Account {
 		this.authorizedOverdraft = authorizedOverdraft;
 	}
 
+	@Override
+	public void deposit(double deposit) {
+		if (deposit>0) {
+			setAccountBalance(getAccountBalance() + deposit);
+		}
+		else {
+			System.out.println("Impossible de faire un virement négatif");
+		}
+		
+	}
+
+	@Override
+	public void withdraw(double withdrawal) {
+		
+		if (getAccountBalance() - withdrawal > authorizedOverdraft) {
+			setAccountBalance(getAccountBalance() - withdrawal);
+		}
+		
+		else {
+			System.out.println("vous ne pouvez pas dépasser le découvert autorisé (" + authorizedOverdraft+ ")");
+		}
+	}
+
+	@Override
+	public void transfer(double transfer, Account account) {
+		if (transfer > 0 && transfer < getAccountBalance()) {
+			setAccountBalance(getAccountBalance() - transfer);
+			account.setAccountBalance(account.getAccountBalance() + transfer);
+		}
+		
+		
+	}
+
+	@Override
+	public void consultation() {
+		System.out.println("Compte : " + getAccountNumber() + " solde actuel : " + getAccountBalance());
+		
+	
+
+	
+		
+	}
+
+	
 }
