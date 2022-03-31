@@ -88,8 +88,8 @@ public class Client {
 	@Override
 	public String toString() {
 		return "[ Role : " + getClass().getSimpleName() + " ] [ Nom : " + getLastName() + " ] "
-				+ "[ Prénom : " + getFirstName() + "] [ N° client : " + getClientNumber() + " ] "
-						+ "[ Adresse : " + getAddress() + " ]";
+				+ "[ Prénom : " + getFirstName() + " ] [ N° client : " + getClientNumber() + " ] "
+				+ "[ Adresse : " + getAddress() + " ]";
 	}
 
 }

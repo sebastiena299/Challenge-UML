@@ -11,6 +11,14 @@ public class Admin extends Client {
 	public Client createClient(int id, int clientNumber, String lastName, String firstName, String address) {
 		return new Client(id, clientNumber, lastName, firstName, address);
 	}
+	
+	public Account createCurrentAccount(int accountNumber, int clientNumber, double amount, double authorizedOverdraft) {
+		return new CurrentAccount(accountNumber, clientNumber, amount, authorizedOverdraft);
+	}
+	
+	public Account createSavingAccount(int accountNumber, int clientNumber, double amount, double interestRate) {
+		return new SavingAccount(accountNumber, clientNumber, amount, interestRate);
+	}
 
 	@Override
 	public String toString() {
