@@ -87,7 +87,9 @@ public class Client {
 	
 	@Override
 	public String toString() {
-		return "" + displayDate() + "";
+		return "[ Role : " + getClass().getSimpleName() + " ] [ Nom : " + getLastName() + " ] "
+				+ "[ Prénom : " + getFirstName() + "] [ N° client : " + getClientNumber() + " ] "
+						+ "[ Adresse : " + getAddress() + " ]";
 	}
 
 }
