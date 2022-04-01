@@ -8,12 +8,11 @@
 - [x] :triangular_ruler: Diagramme de classes
 - [x] :triangular_ruler: Diagramme de séquence
 - [x] :closed_book: Mise en place de la couche business
-- [ ] :blue_book: Mise en place des entités
-- [ ] :green_book: Ajout des méthodes
-- [ ] :bug: Corrections des bugs
-- [ ] :trophy: Version finale
+- [x] :blue_book: Mise en place des entités
+- [x] :green_book: Ajout des méthodes
+- [x] :bug: Corrections des bugs
+- [x] :trophy: Version finale
 
-*Progression à venir par la suite*
 
 --- 
 
