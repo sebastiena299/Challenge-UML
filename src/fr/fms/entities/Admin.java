@@ -16,11 +16,11 @@ public class Admin extends Client {
 		return new Client(id, clientNumber, lastName, firstName, address);
 	}
 	
-	public Account createCurrentAccount(int accountNumber, int clientNumber, double accountBalance, double authorizedOverdraft) {
+	public CurrentAccount createCurrentAccount(int accountNumber, int clientNumber, double accountBalance, double authorizedOverdraft) {
 		return new CurrentAccount(accountNumber, clientNumber, accountBalance, authorizedOverdraft);
 	}
 	
-	public Account createSavingAccount(int accountNumber, int clientNumber, double accountBalance, double interestRate) {
+	public SavingAccount createSavingAccount(int accountNumber, int clientNumber, double accountBalance, double interestRate) {
 		return new SavingAccount(accountNumber, clientNumber, accountBalance, interestRate);
 	}
 	

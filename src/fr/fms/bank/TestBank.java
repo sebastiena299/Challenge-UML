@@ -29,10 +29,15 @@ public class TestBank {
 		
 		Client totoClient = admin.createClient(2, 1654, "Fix", "Mathieu", "Dax");
 		
-		CurrentAccount compte = new CurrentAccount(40,totoClient.getClientNumber(),0,-200);
+		CurrentAccount compte = admin.createCurrentAccount(40,totoClient.getClientNumber(),0,-200);
 		
 		SavingAccount epargne = new SavingAccount(41,totoClient.getClientNumber(),0,1);
 	
+		System.out.println(test);
+		System.out.println(admin);
+		System.out.println(totoClient);
+		System.out.println(" ");
+		
 		compte.consultation();
 		compte.deposit(500);
 		compte.consultation();
