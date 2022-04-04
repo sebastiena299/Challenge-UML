@@ -92,6 +92,8 @@ public class Client {
 		return isAdmin;
 	}
 	
+	
+	
 	// Méthodes
 	
 	public String displayDate() {
