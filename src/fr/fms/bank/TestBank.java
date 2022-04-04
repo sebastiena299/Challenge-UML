@@ -6,33 +6,31 @@ import fr.fms.entities.Admin;
 import fr.fms.entities.Client;
 import fr.fms.entities.CurrentAccount;
 import fr.fms.entities.SavingAccount;
+import fr.fms.interfaces.IJobOperationImpl;
+
 
 public class TestBank {
 	
-//	public Scanner scan = new Scanner(System.in);
-//	int userClientNumber;
-//	
-//	public void authentification() {
-//		System.out.println("Entrez votre numéro client");
-//		while(!scan.hasNextInt()) scan.next();
-//		userClientNumber = scan.nextInt();	
-//	}
-
+     static IJobOperationImpl job = new IJobOperationImpl();
 
 	public static void main(String[] args) {
 		
 		ArrayList<Client> clients = new ArrayList<>();
 		ArrayList<Account> accounts = new ArrayList<>();
 		
-		Client test = new Client(1, 44848, "Doe", "John", "Dax");
-		Admin admin =  new Admin(1, 12, "Doe", "John", "Paris");
-		Client totoClient = admin.createClient(2, 1654, "Fix", "Mathieu", "Dax");
-		clients.add(test);
-		clients.add(admin);
-		clients.add(totoClient);
+		Client john = new Client(1, 44848, "Doe", "John", "Dax");  //ajoute un nouveau client
+		Admin admin =  new Admin(1, 12, "Doe", "John", "Paris");   //ajoute un nouvel admin
+		Client mathieu = admin.createClient(2, 1654, "Fix", "Mathieu", "Dax");  //créer un client depuis admin
 		
-		CurrentAccount compte = admin.createCurrentAccount(40,totoClient.getClientNumber(),0,-200);
-		SavingAccount epargne = new SavingAccount(41,totoClient.getClientNumber(),0,1);
+		clients.add(john);              
+		clients.add(admin);
+		clients.add(mathieu);
+		
+		CurrentAccount compte = admin.createCurrentAccount(40,mathieu.getClientNumber(),0,-200); //créer un compte courant depuis admin
+		SavingAccount epargne = new SavingAccount(41,mathieu.getClientNumber(),0,1);  // créer un compte épargne depuis admin
+		mathieu.setAccounts(compte);
+		mathieu.setAccounts(epargne);
+		
 		accounts.add(compte);
 		accounts.add(epargne);
 		
@@ -40,19 +38,19 @@ public class TestBank {
 			.filter(client -> client.getClientNumber() == 1654)
 			.forEach(account -> account.consultation());
 	
-		System.out.println(test);
+		System.out.println(john);
 		System.out.println(admin);
-		System.out.println(totoClient);
+		System.out.println(mathieu);
 		System.out.println(" ");
 		
-		compte.consultation();
-		compte.deposit(500);
-		compte.consultation();
-		compte.withdraw(300);
-		compte.consultation();
-		compte.withdraw(40000000);
-		compte.transfer(100, epargne);
-		compte.consultation();
+		job.consultation(compte);
+		job.deposit(500, compte);
+		job.consultation(compte);
+		job.withdraw(300, compte);
+		job.consultation(compte);
+		job.withdraw(40000000, compte);
+		job.transfer(100, compte, epargne);
+		job.consultation(compte);
 		epargne.consultation();
 		
 		compte.displayOperationList();

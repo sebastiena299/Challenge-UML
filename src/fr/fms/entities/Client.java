@@ -1,6 +1,7 @@
 package fr.fms.entities;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -15,6 +16,7 @@ public class Client {
 	private String address;
 	private Date createdAt;
 	private boolean isAdmin = false;
+	ArrayList<Account> accounts;
 	
 	// Constructors
 	
@@ -25,10 +27,19 @@ public class Client {
 		setFirstName(firstName);
 		setAddress(address);
 		setCreatedAt(new Date());
+		accounts = new ArrayList<>();
 	}
 	
 	// Getters & Setters
 	
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(Account account) {
+		this.accounts.add(account);
+	}
+
 	public int getId() {
 		return id;
 	}

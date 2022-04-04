@@ -18,43 +18,50 @@ public class SavingAccount extends Account {
 		this.interestRate = interestRate;
 	}
 
-	@Override
-	public void deposit(double deposit) {
-		if (deposit > 0) {
-			setAccountBalance(getAccountBalance() + deposit);
-			this.getOperationList().add(new Operation(this.getAccountNumber(),this.getClientNumber(),"Dépôt : "+ deposit));
-		} else {
-			System.out.println("Impossible de faire un virement négatif");
-		}
+//	@Override
+//	public void deposit(double deposit) {
+//		if (deposit > 0) {
+//			setAccountBalance(getAccountBalance() + deposit);
+//			this.getOperationList().add(new Operation(this.getAccountNumber(),this.getClientNumber(),"Dépôt : "+ deposit));
+//		} else {
+//			System.out.println("Impossible de faire un virement négatif");
+//		}
+//
+//	}
 
-	}
+//	@Override
+//	public void withdraw(double withdrawal) {
+//		if(this.getAccountBalance() - withdrawal >= 0) {
+//		setAccountBalance(getAccountBalance() - withdrawal);
+//		this.getOperationList().add(new Operation(this.getAccountNumber(),this.getClientNumber(),"Retrait : "+ withdrawal));
+//		}
+//		else {
+//			System.out.println("Découvert non autorisé");
+//		}
+//	}
 
-	@Override
-	public void withdraw(double withdrawal) {
-		if(this.getAccountBalance() - withdrawal >= 0) {
-		setAccountBalance(getAccountBalance() - withdrawal);
-		this.getOperationList().add(new Operation(this.getAccountNumber(),this.getClientNumber(),"Retrait : "+ withdrawal));
-		}
-		else {
-			System.out.println("Découvert non autorisé");
-		}
-	}
-
-	@Override
-	public void transfer(double transfer, Account account) {
-		if (transfer > 0 && transfer <= getAccountBalance()) {
-			setAccountBalance(getAccountBalance() - transfer);
-			account.setAccountBalance(account.getAccountBalance() + transfer);
-			this.getOperationList().add(new Operation(this.getAccountNumber(),this.getClientNumber(),"Transfer : "+ transfer + " vers " + account.getAccountNumber()));
-			account.getOperationList().add(new Operation(account.getAccountNumber(),account.getClientNumber(),"Transfer : "+ transfer + " depuis " + account.getAccountNumber()));
-		}
-		
-		
-	}
+//	@Override
+//	public void transfer(double transfer, Account account) {
+//		if (transfer > 0 && transfer <= getAccountBalance()) {
+//			setAccountBalance(getAccountBalance() - transfer);
+//			account.setAccountBalance(account.getAccountBalance() + transfer);
+//			this.getOperationList().add(new Operation(this.getAccountNumber(),this.getClientNumber(),"Transfer : "+ transfer + " vers " + account.getAccountNumber()));
+//			account.getOperationList().add(new Operation(account.getAccountNumber(),account.getClientNumber(),"Transfer : "+ transfer + " depuis " + account.getAccountNumber()));
+//		}
+//		
+//		
+//	}
 	@Override
 	public void consultation() {
-		System.out.println("Compte : " + getAccountNumber() + " solde actuel : " + getAccountBalance() + " Taux d'intérêt : " + getInterestRate());
+		System.out.println("Compte : " + getAccountNumber() + " solde actuel : " + getAccountBalance()
+				+ " Taux d'intérêt : " + getInterestRate());
 
+	}
+
+	@Override
+	public double getAuthorizedOverdraft() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -3,9 +3,9 @@ package fr.fms.entities;
 import java.util.ArrayList;
 import java.util.Date;
 
-import fr.fms.interfaces.IJobOperation;
+// import fr.fms.interfaces.IJobOperation;
 
-public abstract class Account implements IJobOperation {
+public abstract class Account {
 	
 	//Attributs
 
@@ -67,13 +67,13 @@ public abstract class Account implements IJobOperation {
 		this.operationList = operationList;
 	}
 
-	public abstract void deposit(double deposit);
-
-	public abstract void withdraw(double withdrawal); 
-	
-	public abstract void transfer(double transfer, Account account); 
-	
-	public abstract void consultation();
+//	public abstract void deposit(double deposit);
+//
+//	public abstract void withdraw(double withdrawal); 
+//	
+//	public abstract void transfer(double transfer, Account account); 
+//	
+//	public abstract void consultation();
 	
 	public void displayOperationList() {
 		
@@ -82,5 +82,11 @@ public abstract class Account implements IJobOperation {
 		}
 		
 	}
+
+	public abstract double getAuthorizedOverdraft();
+
+	public abstract double getInterestRate();
+
+	public abstract void consultation();
 
 }
